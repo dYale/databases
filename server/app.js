@@ -1,5 +1,9 @@
 var express = require('express');
 var db = require('./db');
+// var utils = require('utils.js')
+// var server = require('basic-server.js')
+// var handler = require('request-handler.js')
+var mysql = require('mysql');
 
 // Middleware
 var morgan = require('morgan');
@@ -28,5 +32,8 @@ app.use(express.static(__dirname + "/../client"));
 if (!module.parent) {
   app.listen(app.get("port"));
   console.log("Listening on", app.get("port"));
+
+
+
 }
 
